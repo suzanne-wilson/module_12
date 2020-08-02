@@ -124,3 +124,5 @@ var layout = {
   yaxis: { title: "Population Growth, 2016-2017"}
 };
 Plotly.newPlot("bar-plot", data, layout);
+
+
