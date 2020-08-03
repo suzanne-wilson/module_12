@@ -5,9 +5,7 @@ function buildCharts(newSample)
         var samples = data.samples;
         var resultArray = samples.filter(sampleObj => sampleObj.id === newSample);
         var result = resultArray[0];
-        var unsortedResults = result.sample_values;
-        var topResults = unsortedResults.sort((a, b) => b - a);
-        
+        var topResults = result.sort((a, b) => b.sample_values - a.sample_values);
         
         var top10Results = topResults.slice(0,10);
         console.log("top10Results:" + top10Results);
